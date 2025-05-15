@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConfessionSays - Anonymous Confession Platform for Nepali Youth</title>
+    <meta name="description" content="Share your thoughts anonymously. 100% anonymous confession platform for Nepali youth. Express yourself without fear.">
+    <meta name="keywords" content="confession, anonymous, Nepal, Nepali youth, share anonymously, safe space">
+    <meta name="author" content="ConfessionSays">
+    <meta property="og:title" content="ConfessionSays - Anonymous Confession Platform">
+    <meta property="og:description" content="Share your thoughts anonymously. 100% anonymous confession platform for Nepali youth.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://confessionsays.com">
+    <link rel="icon" href="zz.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html"><img src="zz.png" alt="ConfessionSays Logo" class="logo-img"></a>
+                </div>
+                <nav>
+                    <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> <span class="nav-text">Home</span></a>
+                    <a href="feed.html" class="nav-link"><i class="fas fa-rss"></i> <span class="nav-text">Feed</span></a>
+                    <button id="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Your Anonymous Confession Platform</h2>
+                <p>Share your thoughts without fear. 100% anonymous space for Nepali youth.</p>
+                <button id="confess-btn" class="btn-primary">Make a Confession</button>
+            </div>
+            <div class="value-cards">
+                <div class="value-card">
+                    <i class="fas fa-user-secret"></i>
+                    <h3>Completely Anonymous</h3>
+                    <p>We never ask for or store your personal information</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Judgment-Free Zone</h3>
+                    <p>A safe space to express your true feelings</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Community Support</h3>
+                    <p>Find others who understand what you're going through</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="inspiration-banner" id="inspiration-banner">
+        <div class="scrolling-text">
+            <span>Let your heart speak what your voice cannot ❤️‍🩹🗣️ We're listening—no names, no shame 🤫💬</span>
+            <span>Let your heart speak what your voice cannot ❤️‍🩹🗣️ We're listening—no names, no shame 🤫💬</span>
+        </div>
+    </div>
+
+    <section class="stats">
+        <div class="container">
+            <h2>Top Confession Cities</h2>
+            <div class="city-counters">
+                <!-- Counters will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-confessions">
+        <div class="container">
+            <h2>Featured Confessions</h2>
+            <div class="confession-grid" id="featured-container">
+                <!-- Featured confessions will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <div class="confession-modal" id="confession-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Make an Anonymous Confession</h2>
+            <p class="subtitle">Your identity will never be revealed</p>
+            
+            <form id="confession-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd7GlD_cDhpGKS3bWmzZms0vYiD020nxzR0-gZ-LHxnr_YOzA/formResponse" method="POST" target="_blank">
+                <div class="form-group">
+                    <label for="confession-content">Your Confession*</label>
+                    <textarea id="confession-content" name="entry.73006654" required placeholder="Share what's on your mind..." spellcheck="false"></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age*</label>
+                        <input type="number" id="age" name="entry.1153871815" min="13" max="99" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gender">Gender (Optional)</label>
+                        <select id="gender" name="entry.1040719456">
+                            <option value="Prefer not to say">Prefer not to say</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Non-binary">Non-binary</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location (Optional)</label>
+                    <input type="text" id="location" name="entry.644513634" placeholder="Enter your location">
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="dlut" required> 
+                        I agree to the <a href="guidelines.html" class="terms-link">Terms of Service</a> and confirm this is my original confession
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-primary">Submit Anonymously</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ConfessionSays</h3>
+                    <p>A safe space for Nepali youth to share anonymously</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>About</h4>
+                        <p>ConfessionSays provides a judgment-free platform for Nepali youth to share their thoughts anonymously.</p>
+                        <a href="about.html" class="footer-link">Learn more</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Guidelines</h4>
+                        <p>Be respectful. No hate speech. All confessions are moderated.</p>
+                        <a href="guidelines.html" class="footer-link">Read guidelines</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Privacy</h4>
+                        <p>We never store personal information. Your identity is completely protected.</p>
+                        <a href="privacy.html" class="footer-link">Privacy policy</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <p>Have questions? Email us at <a href="mailto:abc@email.com">abc@email.com</a></p>
+                        <a href="contact.html" class="footer-link">Contact us</a>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ConfessionSays. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
